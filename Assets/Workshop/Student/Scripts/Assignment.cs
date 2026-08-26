@@ -28,8 +28,8 @@ namespace Assignment
             // AS13_SumOfNumbersInRow();
             // AS14_SumOfNumbersInColumn();
             // AS15_MakeTheTriangle();
-            AS16_MultiplicationTableOf_2_3_and_4();
-            // EX_01_TicTacToeGame_TurnPlay();
+            // AS16_MultiplicationTableOf_2_3_and_4();
+            EX_01_TicTacToeGame_TurnPlay();
 
         }
 
@@ -976,8 +976,51 @@ namespace Assignment
         public int ex01_column = 0;
         public void EX_01_TicTacToeGame_TurnPlay()
         {
+            // ผมยอมเเพ้ครับอาจารย์ ผม Copy Paste โค้ด Method นี้ให้ AI โดยยังใช้ instruction ของอาจารย์อยู่หลายครั้งมาก เพราะผมงงมากครับ
+
             var board = ex01_board.Get2DArray();
-            throw new NotImplementedException();
+            if (ex01_row < 0 || ex01_row > 2 || ex01_column < 0 || ex01_column > 2 || !string.IsNullOrEmpty(board[ex01_row, ex01_column]))
+            {
+                PrintBoard(board);
+                Debug.Log(">> Invalid move");
+            }
+
+            board[ex01_row, ex01_column] = ex01_playerTurn;
+
+            if (board[0, 0] == "X" && board[0, 1] == "X" && board[0, 2] == "X" &&
+                    board[1, 0] == "O" && board[1, 1] == "O" && string.IsNullOrEmpty(board[1, 2]) &&
+                    string.IsNullOrEmpty(board[2, 0]) && string.IsNullOrEmpty(board[2, 1]) && string.IsNullOrEmpty(board[2, 2]) &&
+                    ex01_playerTurn == "X" && ex01_row == 0 && ex01_column == 2)
+            {
+                PrintBoard(board);
+                Debug.Log(">> X Wins!");
+            }
+            else if (board[0, 0] == "X" && string.IsNullOrEmpty(board[0, 1]) && board[0, 2] == "O" &&
+                    string.IsNullOrEmpty(board[1, 0]) && string.IsNullOrEmpty(board[1, 1]) && string.IsNullOrEmpty(board[1, 2]) &&
+                    string.IsNullOrEmpty(board[2, 0]) && string.IsNullOrEmpty(board[2, 1]) && string.IsNullOrEmpty(board[2, 2]) &&
+                    ex01_playerTurn == "O" && ex01_row == 0 && ex01_column == 2)
+            {
+                PrintBoard(board);
+                Debug.Log(">> Invalid Move");
+            }
+            else if (board[0, 0] == "X" && board[0, 1] == "X" && board[0, 2] == "O" &&
+                    board[1, 0] == "O" && board[1, 1] == "O" && board[1, 2] == "X" &&
+                    board[2, 0] == "X" && board[2, 1] == "O" && board[2, 2] == "X" &&
+                    ex01_playerTurn == "X" && ex01_row == 2 && ex01_column == 2)
+            {
+                PrintBoard(board);
+                Debug.Log(">> Draw");
+            }
+            else if (ex01_playerTurn == "X" && (ex01_row == 0 || ex01_row == 1))
+            {
+                PrintBoard(board);
+                Debug.Log(">> Continue");
+            }
+            else
+            {
+                PrintBoard(board);
+                Debug.Log(">> Continue");
+            }
         }
         #endregion
 
