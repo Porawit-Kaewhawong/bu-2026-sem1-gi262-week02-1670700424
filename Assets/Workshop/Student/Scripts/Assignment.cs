@@ -601,15 +601,9 @@ namespace Assignment
         {
             var matrix = as13_matrix.Get2DArray();
             int sum = 0;
-            for (int r = 0; r < matrix.GetLength(0); r++)
+            for (int c = 0; c < matrix.GetLength(1); c++)
             {
-                for (int c = 0; c < matrix.GetLength(1); c++)
-                {
-                    if (r == as13_row)
-                    {
-                        sum += matrix[r, c];
-                    }
-                }
+                sum += matrix[as13_row, c];
             }
             Debug.Log($"ผลรวมของ Row #{as13_row} = {matrix[as13_row, 0]} + {matrix[as13_row, 1]} + {matrix[as13_row, 2]}");
             Debug.Log(sum);
