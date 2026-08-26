@@ -22,8 +22,8 @@ namespace Assignment
             // AS07_HealTargetAtIndex();
             // AS08_RandomPickingDialogue();
             // AS09_MultiplicationTable();
-            AS10_FindSummationFromZeroToNUsingWhileLoop();
-            // AS11_SpawnEnemies();
+            // AS10_FindSummationFromZeroToNUsingWhileLoop();
+            AS11_SpawnEnemies();
             // StartCoroutine(AS12_CountTime());
             // AS13_SumOfNumbersInRow();
             // AS14_SumOfNumbersInColumn();
@@ -518,7 +518,11 @@ namespace Assignment
         public GameObject as11_enemyPrefab;
         public void AS11_SpawnEnemies()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < as11_enemyHPs.Length; i++)
+            {
+                GameObject enemy = Instantiate(as11_enemyPrefab, new Vector2(i + 1, 0), Quaternion.identity);
+                enemy.name = "Enemy " + (i + 1);
+            }
         }
 
         /*
