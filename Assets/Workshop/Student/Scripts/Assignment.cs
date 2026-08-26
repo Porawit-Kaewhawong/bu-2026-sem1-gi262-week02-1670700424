@@ -17,8 +17,8 @@ namespace Assignment
             // AS02_NestedLoopForCreate2DMap();
             // AS03_NestedLoopForMakingWallAround();
             // AS04_AttackEnemy();
-            AS05_DynamicIterationLoop();
-            // AS06_WhileLoopAndArray();
+            // AS05_DynamicIterationLoop();
+            AS06_WhileLoopAndArray();
             // AS07_HealTargetAtIndex();
             // AS08_RandomPickingDialogue();
             // AS09_MultiplicationTable();
@@ -342,7 +342,21 @@ namespace Assignment
         public string[] as06_ironManSuitNames;
         public void AS06_WhileLoopAndArray()
         {
-            throw new NotImplementedException();
+            int i = 0;
+            Debug.Log("===== Log By One =====");
+            while (i < as06_ironManSuitNames.Length)
+            {
+                Debug.Log(as06_ironManSuitNames[i]);
+                i++;
+            }
+
+            i = 0;
+            Debug.Log("===== Log By Two =====");
+            while (i < as06_ironManSuitNames.Length)
+            {
+                Debug.Log(as06_ironManSuitNames[i]);
+                i += 2;
+            }
         }
 
         /*
