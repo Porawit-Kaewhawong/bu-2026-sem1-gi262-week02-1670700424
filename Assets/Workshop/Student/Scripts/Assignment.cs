@@ -20,8 +20,8 @@ namespace Assignment
             // AS05_DynamicIterationLoop();
             // AS06_WhileLoopAndArray();
             // AS07_HealTargetAtIndex();
-            AS08_RandomPickingDialogue();
-            // AS09_MultiplicationTable();
+            // AS08_RandomPickingDialogue();
+            AS09_MultiplicationTable();
             // AS10_FindSummationFromZeroToNUsingWhileLoop();
             // AS11_SpawnEnemies();
             // StartCoroutine(AS12_CountTime());
@@ -455,7 +455,11 @@ namespace Assignment
         public int as09_n;
         public void AS09_MultiplicationTable()
         {
-            throw new NotImplementedException();
+            for (int i = 1; i <= 12; i++)
+            {
+                int n = as09_n * i;
+                Debug.Log($"{as09_n} x {i} = {n}");
+            }
         }
 
         /*
