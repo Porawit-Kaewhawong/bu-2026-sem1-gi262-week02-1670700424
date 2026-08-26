@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEngine.Rendering.DebugUI.Table;
 
 namespace Assignment
 {
@@ -11,8 +13,8 @@ namespace Assignment
         public void Start()
         {
             // AS01_RandomItemDrop();
-            AS02_NestedLoopForCreate2DMap();
-            // AS03_NestedLoopForMakingWallAround();
+            // AS02_NestedLoopForCreate2DMap();
+            AS03_NestedLoopForMakingWallAround();
             // AS04_AttackEnemy();
             // AS05_DynamicIterationLoop();
             // AS06_WhileLoopAndArray();
@@ -212,7 +214,17 @@ namespace Assignment
         public int as03_rows;
         public void AS03_NestedLoopForMakingWallAround()
         {
-            throw new NotImplementedException();
+            for (int x = 0; x < as03_columns; x++)
+            {
+                for (int y = 0; y < as03_rows; y++)
+                {
+                    if (x == 0 || x == as03_columns - 1 || y == 0 || y == as03_rows - 1)
+                    {
+                        GameObject tile = Instantiate(as03_wall, new Vector2(x, y), transform.rotation);
+                        tile.name = "Wall" + x + "_" + y;
+                    }
+                }
+            }
         }
 
         /*
