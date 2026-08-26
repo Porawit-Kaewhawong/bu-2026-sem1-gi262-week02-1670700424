@@ -27,8 +27,8 @@ namespace Assignment
             // StartCoroutine(AS12_CountTime());
             // AS13_SumOfNumbersInRow();
             // AS14_SumOfNumbersInColumn();
-            AS15_MakeTheTriangle();
-            // AS16_MultiplicationTableOf_2_3_and_4();
+            // AS15_MakeTheTriangle();
+            AS16_MultiplicationTableOf_2_3_and_4();
             // EX_01_TicTacToeGame_TurnPlay();
 
         }
@@ -751,7 +751,10 @@ namespace Assignment
          */
         public void AS16_MultiplicationTableOf_2_3_and_4()
         {
-            throw new NotImplementedException();
+            for (int i = 1; i <= 12; i++)
+            {
+                Debug.Log($"2 x {i} = {2 * i}\t3 x {i} = {3 * i}\t4 x {i} = {4 * i}");
+            }
         }
 
         #endregion
