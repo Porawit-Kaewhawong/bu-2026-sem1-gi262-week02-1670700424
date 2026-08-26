@@ -26,8 +26,8 @@ namespace Assignment
             // AS11_SpawnEnemies();
             // StartCoroutine(AS12_CountTime());
             // AS13_SumOfNumbersInRow();
-            AS14_SumOfNumbersInColumn();
-            // AS15_MakeTheTriangle();
+            // AS14_SumOfNumbersInColumn();
+            AS15_MakeTheTriangle();
             // AS16_MultiplicationTableOf_2_3_and_4();
             // EX_01_TicTacToeGame_TurnPlay();
 
@@ -717,7 +717,12 @@ namespace Assignment
         public int as15_size;
         public void AS15_MakeTheTriangle()
         {
-            throw new NotImplementedException();
+            string star = "";
+            for (int i = 1; i <= as15_size; i++)
+            {
+                star += "*";
+                Debug.Log(star);
+            }
         }
 
         /*
