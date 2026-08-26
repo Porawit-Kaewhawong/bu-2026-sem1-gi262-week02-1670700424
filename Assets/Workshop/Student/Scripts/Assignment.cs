@@ -25,8 +25,8 @@ namespace Assignment
             // AS10_FindSummationFromZeroToNUsingWhileLoop();
             // AS11_SpawnEnemies();
             // StartCoroutine(AS12_CountTime());
-            AS13_SumOfNumbersInRow();
-            // AS14_SumOfNumbersInColumn();
+            // AS13_SumOfNumbersInRow();
+            AS14_SumOfNumbersInColumn();
             // AS15_MakeTheTriangle();
             // AS16_MultiplicationTableOf_2_3_and_4();
             // EX_01_TicTacToeGame_TurnPlay();
@@ -662,7 +662,12 @@ namespace Assignment
         public void AS14_SumOfNumbersInColumn()
         {
             var matrix = as14_matrix.Get2DArray();
-            throw new NotImplementedException();
+            int sum = 0;
+            for (int r = 0; r < matrix.GetLength(1); r++)
+            {
+                sum += matrix[as14_column, r];
+            }
+            Debug.Log($"ผลรวมของ Column #{as14_column} = {matrix[0, as14_column]} + {matrix[1, as14_column]} + {matrix[2, as14_column]} = {sum}");
         }
 
         /*
