@@ -23,8 +23,8 @@ namespace Assignment
             // AS08_RandomPickingDialogue();
             // AS09_MultiplicationTable();
             // AS10_FindSummationFromZeroToNUsingWhileLoop();
-            AS11_SpawnEnemies();
-            // StartCoroutine(AS12_CountTime());
+            // AS11_SpawnEnemies();
+            StartCoroutine(AS12_CountTime());
             // AS13_SumOfNumbersInRow();
             // AS14_SumOfNumbersInColumn();
             // AS15_MakeTheTriangle();
@@ -535,7 +535,14 @@ namespace Assignment
         public float as12_countTime;
         public IEnumerator AS12_CountTime()
         {
-            throw new NotImplementedException();
+            while (as12_countTime > 0)
+            {
+                as12_countTime -= Time.deltaTime;
+
+                Debug.Log($"Count Time: {as12_countTime:F2}");
+
+                yield return null;
+            }
         }
 
         /*
