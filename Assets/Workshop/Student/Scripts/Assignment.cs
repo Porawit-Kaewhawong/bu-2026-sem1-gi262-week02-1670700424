@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -14,8 +15,8 @@ namespace Assignment
         {
             // AS01_RandomItemDrop();
             // AS02_NestedLoopForCreate2DMap();
-            AS03_NestedLoopForMakingWallAround();
-            // AS04_AttackEnemy();
+            // AS03_NestedLoopForMakingWallAround();
+            AS04_AttackEnemy();
             // AS05_DynamicIterationLoop();
             // AS06_WhileLoopAndArray();
             // AS07_HealTargetAtIndex();
@@ -259,7 +260,14 @@ namespace Assignment
         public int as04_target;
         public void AS04_AttackEnemy()
         {
-            throw new NotImplementedException();
+            int firstEnemyHP = as04_enemyHP[0] -= as04_damage;
+            Debug.Log($"First Enemy's HP: {firstEnemyHP}");
+
+            int lastEnemyHP = as04_enemyHP[as04_enemyHP.Length - 1] -= as04_damage;
+            Debug.Log($"Last Enemy's HP: {lastEnemyHP}");
+
+            int targetEnemyHP = as04_enemyHP[as04_target] -= as04_damage;
+            Debug.Log($"Target Enemy {as04_target} HP: {targetEnemyHP}");
         }
 
         /*
