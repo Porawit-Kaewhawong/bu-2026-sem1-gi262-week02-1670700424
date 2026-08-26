@@ -24,8 +24,8 @@ namespace Assignment
             // AS09_MultiplicationTable();
             // AS10_FindSummationFromZeroToNUsingWhileLoop();
             // AS11_SpawnEnemies();
-            StartCoroutine(AS12_CountTime());
-            // AS13_SumOfNumbersInRow();
+            // StartCoroutine(AS12_CountTime());
+            AS13_SumOfNumbersInRow();
             // AS14_SumOfNumbersInColumn();
             // AS15_MakeTheTriangle();
             // AS16_MultiplicationTableOf_2_3_and_4();
@@ -600,7 +600,19 @@ namespace Assignment
         public void AS13_SumOfNumbersInRow()
         {
             var matrix = as13_matrix.Get2DArray();
-            throw new NotImplementedException();
+            int sum = 0;
+            for (int r = 0; r < matrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < matrix.GetLength(1); c++)
+                {
+                    if (r == as13_row)
+                    {
+                        sum += matrix[r, c];
+                    }
+                }
+            }
+            Debug.Log($"ผลรวมของ Row #{as13_row} = {matrix[as13_row, 0]} + {matrix[as13_row, 1]} + {matrix[as13_row, 2]}");
+            Debug.Log(sum);
         }
 
         /*
